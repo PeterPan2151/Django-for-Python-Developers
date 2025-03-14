@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/emp.css'%}">
+    <title>Employee Information</title>
+</head>
+<body>
+    <h1>Employee details</h1>
+    <table>
+        <tr>
+            <th><p>Name</p></th>
+            <th><p>ID</p></th>
+            <th><p>Salary</p></th>
+        </tr>
+        <tr>
+            <td>{{name}}</td>
+            <td>{{id}}</td>
+            <td>{{salary}}</td>
+        </tr>
+    </table>
+    <img src="{% static 'images/me.jpg'%}" />
+</body>
+</html>
