@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block css_files %}
+<link rel='stylesheet' href='{% static "blog/post.css" %}'>
+<link rel='stylesheet' href='{% static "blog/index.css" %}'>
+{% endblock %}
+
+{% block title %} My Blog {% endblock %} 
+
+{% block content %}
+
+<section id="welcome">
+  <header>
+    <img src="{% static 'blog/images/sups.png' %}" alt="Petr author of the blog" />
+    <h2>Peter's blog</h2>
+  </header>
+
+  <p>Hi I am Peter and I love to program and travel</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latests Thoughts</h2>
+  <ul>
+    {% for post in posts %}
+    {% include 'blog/includes/post.html' %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I do</h2>
+  <p>
+    I love programming and traveling, I also love helping others. I want to keep
+    on growing as a person.
+  </p>
+</section>
+
+{% endblock %}
